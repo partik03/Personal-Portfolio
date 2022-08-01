@@ -7,6 +7,7 @@ import Card from '../components/Card';
 import { CgWebsite } from "react-icons/cg";
 import { FaEthereum } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import Corousel, { CorouselItem } from '../components/Corousel';
 export default function Home() {
   const router = useRouter();
   const path = router.pathname;
@@ -87,7 +88,11 @@ Right Section
 }}>Projects</span></h2>
 <br />
 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, adipisci asperiores facilis mollitia alias quisquam saepe doloribus expedita neque cupiditate ratione nulla minus, quos est perspiciatis quas minima enim? Voluptatibus.</span>
-
+<Corousel>
+  <CorouselItem>1</CorouselItem>
+  <CorouselItem>2</CorouselItem>
+  <CorouselItem>3</CorouselItem>
+</Corousel>
 </section>
       </main>
     </div>

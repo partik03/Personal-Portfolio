@@ -1,0 +1,41 @@
+.corousel{
+    overflow: hidden;
+    width: 80%;
+    margin-top: 5vh;
+}
+.inner{
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+.corousel_item{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: #000;
+    /* width: 100%; */
+    color: wheat;
+}
+.indicators{
+    position: absolute;
+    left: 50%;
+    /* top: 50%; */
+}
+.indicators>button{
+    padding: 1rem 2rem;
+}
+.left{
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+        
+}
+.right{
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    /* border-top: ; */
+    /* border: 2px; */
+}
+.right ::before{
+    transform: skew(45deg);
+    top: 0%;
+}
