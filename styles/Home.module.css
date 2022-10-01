@@ -20,7 +20,6 @@
 }
 .top_right{
   width: 50%;
-  
   height: 100vh;
   background: red;
 }
@@ -252,3 +251,21 @@
 /* .nav_links ul li{
   
 } */
+.skills{
+  height: 100vh;
+  background: #171C23;
+  font-family: 'Montserrat', sans-serif;
+  padding: 8vh 2vw;
+}
+.skill_div{
+  width: 70%;
+  height: 80vh;
+  /* margin: 1rem 2rem; */
+  background: #20252D;
+  position: absolute;
+  left: 15%;
+  border-radius: 2rem;
+  box-shadow: 0rem 0rem 1rem black;
+  padding: 2% 4%;
+  /* top:0%; */
+}
