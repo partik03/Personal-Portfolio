@@ -10,6 +10,7 @@ import { FaEthereum } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import Corousel, { CorouselItem } from "../components/Corousel";
 import Skills from "../components/Skills";
+import Footer from "../components/Footer";
 export default function Home() {
   const router = useRouter();
   const path = router.pathname;
@@ -197,6 +198,9 @@ export default function Home() {
           </span>
           </div>
         </section>
+        <section className='h-min'>
+        <Footer/>
+      </section>
       </main>
     </div>
   );

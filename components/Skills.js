@@ -251,21 +251,68 @@ export default function skills(){
 
            
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" 
-            alt="go"
+            alt="npm"
              width="8%"
              height="10%"
             />
           
               </a>
               <a href="https://yarnpkg.com/">
-
-           
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original-wordmark.svg" 
-            alt="go"
+            alt="yarn"
              width="8%"
              height="10%"
             />
           
+              </a>
+              <a href="https://flutter.dev/">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" 
+            alt="flutter"
+            width="8%"
+            height="10%"
+            />
+              </a>
+              <a href="https://dart.dev/">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" 
+              alt="dart"
+              width="8%"
+              height="10%"
+              />
+              </a>
+              <a href="https://redux.js.org/">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" 
+              alt="redux"
+              width="8%"
+              height="10%"
+              />
+              </a>
+              <a href="https://appwrite.io/">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/appwrite/appwrite-original.svg" 
+              alt="appwrite"
+              width="8%"
+              height="10%"
+              />
+              </a>
+              <a href="https://www.electronjs.org/">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" 
+              alt="electronjs"
+              width="8%"
+              height="10%"
+              />
+              </a>
+              <a href="https://eslint.org/">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" 
+              alt="eslint"
+              width="8%"
+              height="10%"
+              />
+              </a>
+              <a href="https://ubuntu.com/">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" 
+              alt="ubuntu"
+              width="8%"
+              height="10%"
+              />
               </a>
         </>
     )
