@@ -218,7 +218,9 @@ export default function Home() {
             expedita neque cupiditate ratione nulla minus, quos est perspiciatis
             quas minima enim? Voluptatibus.
           </span>
+          <div className="w-full flex justify-center items-center">
           <Corousel />
+          </div>
         </section>
         <section className={styles.skills}>
           <span

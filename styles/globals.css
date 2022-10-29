@@ -50,3 +50,66 @@ a {
 .cv_button:hover{
   filter: brightness(1.2);
 }
+.splide_arrow{
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  height: 3em;
+  justify-content: center;
+  opacity: .7;
+  position: absolute;
+  bottom: 0%;
+  z-index: 1;
+  background: #00C399;
+  color: white;
+  width: 6em;
+}
+.splide__arrow--next{
+  border-radius: 67% 33% 34% 67% / 52% 54% 45% 47% ;
+  right: 0em !important;
+  left: calc(50% + 4em) !important;
+}
+.splide__arrow--prev{
+  border-radius: 27% 73% 73% 27% / 52% 54% 45% 47% ;
+  left: calc(50% - 10em) !important;
+}
+@media(max-width:1280px){
+  .splide_arrow{
+    bottom: -15%;
+  }
+}
+@media(max-width:1024px){
+  .splide_arrow{
+    bottom: -17%;
+    width: 4em;
+    height: 2em;
+  }
+  .splide__arrow--next{
+    left: calc(50% + 2em) !important;
+  }
+  .splide__arrow--prev{
+    left: calc(50% - 6em) !important;
+  }
+}
+
+@media(max-width:768px){
+  .splide_arrow{
+    bottom: -19%;
+  }
+}
+@media(max-width:640px){
+  .splide_arrow{
+    bottom: -30%;
+    width: 2.5em;
+    height: 1em;
+    /* font-size: 0.5em; */
+    padding: 1em 0.8em;
+  }
+  .splide__arrow--next{
+    left: calc(50% + 1em) !important;
+  }
+  .splide__arrow--prev{
+    left: calc(50% - 5em) !important;
+  }
+}
