@@ -12,6 +12,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import Corousel, { CorouselItem } from "../components/Corousel";
 import Skills from "../components/Skills";
 import Footer from "../components/Footer";
+import Typewriter from "typewriter-effect";
 export default function Home() {
   const router = useRouter();
   const path = router.pathname;
@@ -28,34 +29,55 @@ export default function Home() {
         <section className={styles.top} id="home">
           <div className={styles.top_div}>
             <motion.div
-              initial={{ opacity: 0, x: 1000 }}
-              animate={{ opacity: 1, x: 0, rotate: [0, 180, 0] }}
-              transition={{
-                delay: 1,
-                type: "spring",
-                stiffness: 120,
-                bounce: 0.8,
-                duration: 1,
-              }}
-              dragElastic={0.5}
+              // initial={{ opacity: 0, x: 1000 }}
+              // animate={{ opacity: 1, x: 0, rotate: [0, 180, 0] }}
+              // transition={{
+              //   delay: 1,
+              //   type: "spring",
+              //   stiffness: 120,
+              //   bounce: 0.8,
+              //   duration: 1,
+              // }}
+              // dragElastic={0.5}
               className={styles.top_left}
             >
               <span style={{ fontSize: "1.8em" }}>
                 Hi, <span style={{ color: "#00BD95" }}>I'm</span>
               </span>{" "}
               <br /> <br />
+              
               <span
+              // className="anim-typewriter"
                 id={styles.name}
                 style={{
                   fontSize: "3rem",
                   fontWeight: "bolder",
                   color: "#00BD95",
+                  
                 }}
               >
-                Partik Singh
+                <Typewriter
+                options={{
+                  loop: true,
+                  
+                }}
+                 onInit={(typewriter) => {
+                  typewriter.typeString('Partik Singh')
+                    .callFunction(() => {
+                      console.log('String typed out!');
+                    })
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .callFunction(() => {
+                      console.log('All strings were deleted');
+                    })
+                    .start();
+                }}
+              />
+               
               </span>
-              <br />
-              <br />
+              {/* <br /> */}
+              {/* <br /> */}
               <span
                 style={{
                   fontSize: "1.2em",
@@ -72,7 +94,11 @@ export default function Home() {
               <div className={styles.top_social}>
                 Check Out My
                 <section className={styles.diamond_section}>
-                  <div className={styles.diamond}>
+                  <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{delay:0.5,type:"spring",stiffness:120,bounce:0.8,duration:2}}
+                  className={styles.diamond}>
                     <a
                       href="https://github.com/partik03"
                       target="_blank"
@@ -80,8 +106,12 @@ export default function Home() {
                     >
                       <BsGithub style={{ fontSize: "1.5rem" }} />
                     </a>
-                  </div>
-                  <div className={styles.diamond}>
+                  </motion.div>
+                  <motion.div
+                     initial={{ opacity: 0, y: -100 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{delay:0.5,type:"spring",stiffness:120,bounce:0.8,duration:2}}
+                  className={styles.diamond}>
                     <a
                       href="https://www.linkedin.com/in/partik-singh-945a87227/"
                       target="_blank"
@@ -89,12 +119,16 @@ export default function Home() {
                     >
                       <BsLinkedin />
                     </a>
-                  </div>
-                  <div className={styles.diamond}>
+                  </motion.div>
+                  <motion.div 
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{delay:0.5,type:"spring",stiffness:120,bounce:0.8,duration:2}}
+                  className={styles.diamond}>
                     <a href="mailto:partikbumrah13508@gmail.com">
                       <HiOutlineMail />
                     </a>
-                  </div>
+                  </motion.div>
                 </section>
               </div>
             </motion.div>
