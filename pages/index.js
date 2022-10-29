@@ -2,6 +2,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
@@ -26,7 +27,19 @@ export default function Home() {
         <Navbar />
         <section className={styles.top} id="home">
           <div className={styles.top_div}>
-            <div className={styles.top_left}>
+            <motion.div
+              initial={{ opacity: 0, x: 1000 }}
+              animate={{ opacity: 1, x: 0, rotate: [0, 180, 0] }}
+              transition={{
+                delay: 1,
+                type: "spring",
+                stiffness: 120,
+                bounce: 0.8,
+                duration: 1,
+              }}
+              dragElastic={0.5}
+              className={styles.top_left}
+            >
               <span style={{ fontSize: "1.8em" }}>
                 Hi, <span style={{ color: "#00BD95" }}>I'm</span>
               </span>{" "}
@@ -84,15 +97,21 @@ export default function Home() {
                   </div>
                 </section>
               </div>
-            </div>
+            </motion.div>
             <div className={styles.top_right}>
-              Right Section
-              <img src={"./Partik.jpg"} alt="" />
+            <iframe
+                src="https://my.spline.design/miniroommusiccopy-de15a1ddd9696d70c5a3da276a73444a/"
+                frameborder="0"
+                width="100%"
+                height="100%"
+              ></iframe>
             </div>
           </div>
         </section>
         <section id="about" className={styles.about}>
-          <span
+          <motion.span
+            whileInView={{ opacity: 1, y: 0, rotate: [0, 180, 0] }}
+            initial={{ opacity: 0, y: -1000 }}
             style={{
               color: "white",
               fontSize: "1.8em",
@@ -106,9 +125,11 @@ export default function Home() {
             >
               Services
             </span>
-          </span>
+          </motion.span>
           <br />
-          <span
+          <motion.span
+            whileInView={{ opacity: 1, x: 0, rotate: [0, 180, 0] }}
+            initial={{ opacity: 0, x: -1000 }}
             style={{
               fontSize: "4em",
               fontFamily: "monospace",
@@ -117,23 +138,66 @@ export default function Home() {
             }}
           >
             What I do
-          </span>
+          </motion.span>
           <div className={styles.cards}>
-            <Card
-              icon={CgWebsite}
-              title="Web Development"
-              details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum quo culpa! Illo quasi nemo odio repellat voluptatem quam."
-            />
-            <Card
-              icon={FaEthereum}
-              title="BlockChain Development"
-              details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum quo culpa! Illo quasi nemo odio repellat voluptatem quam."
-            />
-            <Card
-              icon={BsGithub}
-              title="Web Development"
-              details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum quo culpa! Illo quasi nemo odio repellat voluptatem quam."
-            />
+            <motion.div
+              initial={{ opacity: 0, x: 1000 }}
+              whileInView={{ opacity: 1, x: 0, rotate: [270, 180, 0] }}
+              transition={{
+                delay: 0.5,
+                type: "spring",
+                stiffness: 120,
+                bounce: 0.8,
+                duration: 1,
+                staggerChildren: 3,
+              }}
+              viewport={{ amount: 0.5 }}
+            >
+              <Card
+                icon={CgWebsite}
+                title="Web Development"
+                details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum quo culpa! Illo quasi nemo odio repellat voluptatem quam."
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0, rotate: [270, 180, 0] }}
+              transition={{
+                delay: 1.5,
+                type: "spring",
+                stiffness: 120,
+                bounce: 0.8,
+                duration: 1,
+                staggerChildren: 3,
+              }}
+              viewport={{ amount: 0.5 }}
+            >
+              <Card
+                icon={FaEthereum}
+                title="BlockChain Development"
+                details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum quo culpa! Illo quasi nemo odio repellat voluptatem quam."
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0, rotate: [270, 180, 0] }}
+              transition={{
+                delay: 2.5,
+                type: "spring",
+                stiffness: 120,
+                bounce: 0.8,
+                duration: 1,
+                staggerChildren: 3,
+            
+              }}
+              viewport={{ amount: 0.5 }}
+            >
+              <Card
+                icon={BsGithub}
+                title="Open Source"
+                details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum quo culpa! Illo quasi nemo odio repellat voluptatem quam."
+              />
+            </motion.div>
           </div>
         </section>
         <section className={styles.projects} id="projects">
@@ -172,35 +236,50 @@ export default function Home() {
               Skills
             </span>
           </span>
-          <div className={styles.skill_div}>
-            <p align="center">
-              <Skills/>
-            </p>
-            <span
-            style={{
-              color: "white",
-              fontSize: "2em",
-              position: "absolute",
-              bottom: 0,
-
-            }}
-        
+          <motion.div
+            initial={{ opacity: 0, x: -1000 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ staggerChildren: 2, delayChildren: 2 }}
+            viewport={{ amount: 0.2 }}
+            className={styles.skill_div}
           >
-            Many{" "}
+            <motion.p
+              initial={{ opacity: 0, y: 500 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.5,
+                type: "spring",
+                stiffness: 120,
+                bounce: 0.8,
+                duration: 1,
+              }}
+              align="center"
+            >
+              <Skills />
+            </motion.p>
             <span
               style={{
-                color: "#00BD95",
+                color: "white",
+                fontSize: "2em",
+                position: "absolute",
+                bottom: 0,
               }}
             >
-              More  
+              Many{" "}
+              <span
+                style={{
+                  color: "#00BD95",
+                }}
+              >
+                More
+              </span>
+              <t /> to Come ...
             </span>
-            <t /> to Come ... 
-          </span>
-          </div>
+          </motion.div>
         </section>
-        <section className='h-min'>
-        <Footer/>
-      </section>
+        <section className="h-min">
+          <Footer />
+        </section>
       </main>
     </div>
   );

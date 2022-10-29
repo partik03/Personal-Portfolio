@@ -21,7 +21,7 @@
 .top_right{
   width: 50%;
   height: 100vh;
-  background: red;
+  /* background: red; */
 }
 .navbar{
   display: flex;
@@ -128,7 +128,7 @@
 .card{
   background: #21272F;
   color: white;
-  width: 30%;
+  width: 90%;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
