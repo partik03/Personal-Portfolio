@@ -316,7 +316,7 @@ export default function skills(){
               </a>
               <a href="https://mochajs.org/">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg" 
-              alt="ubuntu"
+              alt="mocha"
               width="8%"
               height="10%"
               />

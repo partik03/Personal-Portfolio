@@ -2,7 +2,7 @@ import Link from "next/link"
 import {BsInstagram,BsGithub,BsLinkedin} from "react-icons/bs"
 const Footer = () => {
   return (
-    <div className="bg-primary w-full grid grid-rows-1 grid-flow-col py-6 px-8 border-b-4 md_max:grid-rows-2 sm_max:flex flex-col items-center">
+    <div className="bg-primary text-white w-full grid grid-rows-1 grid-flow-col py-6 px-8 border-b-4 md_max:grid-rows-2 sm_max:flex flex-col items-center">
         <div className="w-full max-w-xs sm_max:mb-8">
         <div className='nav_logo py-2 text-center xl:text-4xl md:text-3xl sm:text-3xl sm_max:text-2xl'>
                 Partik
