@@ -1,5 +1,6 @@
 import Link from "next/link"
 import {BsInstagram,BsGithub,BsLinkedin} from "react-icons/bs"
+import {motion} from "framer-motion"
 const Footer = () => {
   return (
     <div className="bg-primary text-white w-full grid grid-rows-1 grid-flow-col py-6 px-8 border-b-4 md_max:grid-rows-2 sm_max:flex flex-col items-center">

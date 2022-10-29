@@ -113,3 +113,22 @@ a {
     left: calc(50% - 5em) !important;
   }
 }
+
+.anim-typewriter{
+  position: relative;
+  white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+ 
+  font-size: 3rem;
+  font-weight: bolder;
+  color: "#00BD95";
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
