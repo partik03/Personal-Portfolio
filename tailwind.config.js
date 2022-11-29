@@ -9,6 +9,7 @@ module.exports = {
       colors:{
           primary:"#20252D",
           heading:"#00C399",
+          secondary:"#171C23",
       },
       screens:{
         "xl":"1200px",

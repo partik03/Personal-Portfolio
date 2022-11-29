@@ -145,6 +145,7 @@
   align-items: center;
   text-align: center;
   padding: 3vw;
+  box-shadow: 0rem 0rem 1rem black;
 }
 .cards{
   display: flex;
